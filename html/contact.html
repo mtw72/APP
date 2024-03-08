@@ -21,17 +21,9 @@
   <link rel="stylesheet" href="../styles/contact.css">
 
   <!-- JS for google map-->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-  <script defer src="../scripts/contact.js" charset="utf-8"></script>
-  <!-- <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0&callback=initMap&v=weekly"></script> -->
-  <!-- <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0&loading=async&libraries=places&callback=initMap">
-    </script> -->
   <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0&callback=initMap&libraries=places&v=weekly"></script>
-
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0&callback=initMap&v=weekly"></script>
+  <script defer src="../scripts/contact.js" charset="utf-8"></script>
 
   <!-- Bootstrap 5 Latest compiled JavaScript -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -98,6 +90,9 @@
       </div>
       <!-- Google map -->
       <div class="col-md-7" id="map"></div>
+      <div id="business-details">
+        <!-- This is where business details will be displayed -->
+      </div>
     </div>
   </div>
   <br>
