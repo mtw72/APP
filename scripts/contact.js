@@ -27,13 +27,17 @@ function initMap() {
         },
         (place, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
+                const photoUrl = place.photos && place.photos.length > 0 ? place.photos[0].getUrl() : '';
+                
                 // Build HTML content for the infoWindow
                 const content = `<div id="info-content">
                                 <h2>${place.name}</h2>
                                 <p>Address: ${place.formatted_address}</p>
                                 <p>Phone: ${place.formatted_phone_number}</p>
-                                <img src="${place.photos && place.photos[0].getUrl()}" alt="Business Photo" style="max-width: 100%;">
+                                
+                                ${photoUrl ? `<img src="${photoUrl}" alt="Business Photo" style="max-width: 100%;">` : ''}
                               </div>`;
+                              //<img src="${place.photos && place.photos[0].getUrl()}" alt="Business Photo" style="max-width: 100%;">
                 infoWindow.setContent(content);
                 infoWindow.open(map, marker);
             }
