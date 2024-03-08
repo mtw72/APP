@@ -38,6 +38,7 @@ function initMap() {
         const marker = new google.maps.Marker({
           map,
           position: place.geometry.location,
+          icon: photos[0].getUrl({maxWidth: 35, maxHeight: 35}), 
         });
   
         google.maps.event.addListener(marker, "click", () => {
@@ -45,7 +46,7 @@ function initMap() {
           const content = document.createElement("div");
 
           const imageElement = document.createElement("img");
-          imageElement.innerHTML = place.photos[0].getUrl({maxWidth: 35, maxHeight: 35})          ;
+          imageElement.innerHTML = place.photos;
           content.appendChild(imageElement);
 
           const nameElement = document.createElement("h4");
