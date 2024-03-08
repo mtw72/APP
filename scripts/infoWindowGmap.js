@@ -11,6 +11,8 @@ function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 18,
         center: app,
+        disableDefaultUI: true,
+        zoomControl: true,
     });
     // The marker, positioned at APP
     const marker = new google.maps.Marker({
