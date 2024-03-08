@@ -12,7 +12,7 @@ function initMap() {
     const marker = new google.maps.Marker({
         position: app,
         map: map,
-        icon: photos[0].getUrl({ maxWidth: 35, maxHeight: 35 }),
+        // icon: photos[0].getUrl({ maxWidth: 35, maxHeight: 35 }),
     });
 }
 
