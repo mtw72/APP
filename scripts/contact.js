@@ -8,6 +8,7 @@ function initMap() {
         center: app,
         disableDefaultUI: true,
         zoomControl: true,
+        fullscreenControl: true,
     });
     // The marker, positioned at APP
     const marker = new google.maps.Marker({
