@@ -92,16 +92,6 @@
       <!-- Google map -->
       <div class="col-md-7" id="map"></div>
 
-      <gmpx-api-loader key="AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0"></gmpx-api-loader>
-
-      <gmpx-split-layout>
-        <gmpx-place-overview slot="fixed" size="x-small" place="ChIJGVbsbcoBBDQRRCk3E0Z1gTM"></gmpx-place-overview>
-        <gmp-map slot="main" center="22.276805936463386,114.16923333620271" zoom="18" map-id="APP_MAP_ID">
-          <gmp-advanced-marker position="22.276805936463386,114.16923333620271"></gmp-advanced-marker>
-        </gmp-map>
-      </gmpx-split-layout>
-
-
     </div>
   </div>
   <br>
@@ -166,6 +156,24 @@
       <p id="copyright">© 2023 APP Building Consultancy Limited. All Rights Reserved</p>
     </div>
   </footer>
+
+  <script>
+    // Initialize and add the map
+function initMap() {
+    // The location of APP
+    const app = { lat: 22.276805936463386, lng: 114.16923333620271 };
+    // The map, centered at APP
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 18,
+        center: app,
+    });
+    // The marker, positioned at APP
+    const marker = new google.maps.Marker({
+        position: app,
+        map: map,
+    });
+}
+  </script>
 </body>
 
 </html>
