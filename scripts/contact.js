@@ -21,8 +21,9 @@ function initMap() {
       zoom: 15,
     });
     const request = {
-      placeId: "ChIJN1t_tDeuEmsRUsoyG83frY4",
-      fields: ["name", "formatted_address", "place_id", "geometry"],
+      placeId: "ChIJGVbsbcoBBDQRRCk3E0Z1gTM",
+    //   fields: ["name", "formatted_address", "place_id", "geometry"],
+      fields: ["photo", "name", "formatted_address"],
     };
     const infowindow = new google.maps.InfoWindow();
     const service = new google.maps.places.PlacesService(map);
@@ -40,30 +41,34 @@ function initMap() {
         });
   
         google.maps.event.addListener(marker, "click", () => {
+
           const content = document.createElement("div");
-          const nameElement = document.createElement("h2");
-  
+
+          const imageElement = document.createElement("img");
+          imageElement.innerHTML = place.photo;
+          content.appendChild(imageElement);
+
+          const nameElement = document.createElement("h4");
           nameElement.textContent = place.name;
           content.appendChild(nameElement);
   
-          const placeIdElement = document.createElement("p");
-  
-          placeIdElement.textContent = place.place_id;
-          content.appendChild(placeIdElement);
-  
           const placeAddressElement = document.createElement("p");
-  
           placeAddressElement.textContent = place.formatted_address;
           content.appendChild(placeAddressElement);
+
           infowindow.setContent(content);
           infowindow.open(map, marker);
         });
       }
     });
   }
-
   
 window.initMap = initMap;
+
+
+
+
+
 
 setTimeout(changeFont, 0700);
 
