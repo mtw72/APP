@@ -1,5 +1,4 @@
 // Initialize and add the map
-
 function initMap() {
     // The location of APP
     const app = { lat: 22.276805936463386, lng: 114.16923333620271 };
@@ -13,40 +12,7 @@ function initMap() {
         position: app,
         map: map,
     });
-
-    // Create an InfoWindow  
-    const infoWindow = new google.maps.InfoWindow();
-
-    // Fetch business details from Google Maps Places API
-    const placesService = new google.maps.places.PlacesService(map);
-
-    placesService.getDetails(
-        {
-            placeId: 'ChIJGVbsbcoBBDQRRCk3E0Z1gTM', // Replace with the actual place ID
-            fields: ['name', 'formatted_address', 'formatted_phone_number', 'photo'],
-        },
-        (place, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                const photoUrl = place.photos && place.photos.length > 0 ? place.photos[0].getUrl() : '';
-                
-                // Build HTML content for the infoWindow
-                const content = `<div id="info-content">
-                                <h2>${place.name}</h2>
-                                <p>Address: ${place.formatted_address}</p>
-                                <p>Phone: ${place.formatted_phone_number}</p>
-                                
-                                ${photoUrl ? `<img src="${photoUrl}" alt="Business Photo" style="max-width: 100%;">` : ''}
-                              </div>`;
-                              //<img src="${place.photos && place.photos[0].getUrl()}" alt="Business Photo" style="max-width: 100%;">
-                infoWindow.setContent(content);
-                infoWindow.open(map, marker);
-            }
-        }
-    );
 }
-
-
-
 
 setTimeout(changeFont, 0700);
 

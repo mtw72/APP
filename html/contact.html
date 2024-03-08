@@ -22,7 +22,9 @@
 
   <!-- JS for google map-->
   <script defer src="../scripts/contact.js" charset="utf-8"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0&callback=initMap&libraries=places&v=weekly"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0&callback=initMap&v=weekly"></script>
+  <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.3"></script>
 
   <!-- Bootstrap 5 Latest compiled JavaScript -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -89,9 +91,8 @@
       </div>
       <!-- Google map -->
       <div class="col-md-7" id="map"></div>
-      <div id="business-details">
-        <!-- This is where business details will be displayed -->
-      </div>
+      <gmpx-api-loader key="AIzaSyAbkNt7cxVrmN7pheifwBJpgj1rLgi5Qn0"></gmpx-api-loader>
+      <gmpx-place-overview place="ChIJGVbsbcoBBDQRRCk3E0Z1gTM"></gmpx-place-overview>
     </div>
   </div>
   <br>
