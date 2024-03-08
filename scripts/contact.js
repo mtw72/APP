@@ -45,7 +45,7 @@ function initMap() {
           const content = document.createElement("div");
 
           const imageElement = document.createElement("img");
-          imageElement.innerHTML = place.photo;
+          imageElement.innerHTML = place.photos[0].getUrl({maxWidth: 35, maxHeight: 35})          ;
           content.appendChild(imageElement);
 
           const nameElement = document.createElement("h4");
