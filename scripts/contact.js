@@ -14,6 +14,8 @@ function initMap() {
     });
 }
 
+window.initMap = initMap;
+
 setTimeout(changeFont, 0700);
 
 // change font after loading Google map
