@@ -14,18 +14,31 @@ function initMap() {
         map: map,
     });
 
-    // Create an InfoWindow
-    const infoWindow = new google.maps.InfoWindow({
-        content: '<div id="info-content">' +
-            '<h2>Business Name</h2>' +
-            '<p>Address: Business Address</p>' +
-            '<p>Phone: Business Phone</p>' +
-            '<img src="business-photo.jpg" alt="Business Photo" style="max-width: 100%;">' +
-            '</div>'
-    });
+    // Create an InfoWindow  
+    const infoWindow = new google.maps.InfoWindow();
 
-    // Open the InfoWindow when the map is loaded
-    infoWindow.open(map, marker);
+    // Fetch business details from Google Maps Places API
+    const placesService = new google.maps.places.PlacesService(map);
+
+    placesService.getDetails(
+        {
+            placeId: 'ChIJGVbsbcoBBDQRRCk3E0Z1gTM', // Replace with the actual place ID
+            fields: ['name', 'formatted_address', 'formatted_phone_number', 'photo'],
+        },
+        (place, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                // Build HTML content for the infoWindow
+                const content = `<div id="info-content">
+                                <h2>${place.name}</h2>
+                                <p>Address: ${place.formatted_address}</p>
+                                <p>Phone: ${place.formatted_phone_number}</p>
+                                <img src="${place.photos && place.photos[0].getUrl()}" alt="Business Photo" style="max-width: 100%;">
+                              </div>`;
+                infoWindow.setContent(content);
+                infoWindow.open(map, marker);
+            }
+        }
+    );
 }
 
 window.initMap = initMap;
