@@ -17,8 +17,8 @@
 
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -33.866, lng: 151.196 },
-      zoom: 15,
+      center: { lat: 22.276805936463386, lng: 114.16923333620271 },
+      zoom: 18,
     });
     const request = {
       placeId: "ChIJGVbsbcoBBDQRRCk3E0Z1gTM",
