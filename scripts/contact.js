@@ -19,7 +19,7 @@ function initMap() {
 
 window.initMap = initMap;
 
-setTimeout(changeFont, 0700);
+setTimeout(changeFont, 700);
 
 // change font after loading Google map
 function changeFont() {
