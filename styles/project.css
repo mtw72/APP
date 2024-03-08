@@ -1,0 +1,193 @@
+/* space for main heading */
+.heading-space {
+  margin: 68px;
+}
+
+/* Sub-heading */
+.pj-sub-heading {
+  margin: 0;
+  padding: 2% 0 0 1%;
+}
+
+.pj-sub-heading::before,
+.pj-sub-heading::after {
+  color: rgb(124, 148, 115, 0.7);
+}
+
+.pj-sub-heading::before {
+  content: '\003C  ';
+}
+
+.pj-sub-heading::after {
+  content: ' \003E';
+}
+
+/* vertical navbar */
+.vertical-nav {
+  padding: 0;
+  background-color: rgb(244, 249, 244, 0.5);
+}
+
+.vertical-nav li.active {
+  background-color: rgb(116, 180, 155);
+  font-weight: bolder;
+}
+
+.vertical-nav li.nav-item:hover {
+  background-color: rgb(167, 215, 197);
+}
+
+.vertical-nav li.nav-item a,
+.vertical-nav li.active .dropdown-menu a {
+  color: black;
+}
+
+.vertical-nav li.main-list:hover>a,
+.vertical-nav li.active a {
+  color: white;
+}
+
+.vertical-nav li.nav-item:first-child {
+  border-top: 1px solid rgba(194, 241, 191, 0.7);
+}
+
+/* only for projects-*.html excluding sub-parts for licence application */
+.license .dropdown-menu {
+  background-color: rgb(244, 249, 244);
+}
+
+.license .dropdown-item:active {
+  background-color: white;
+}
+
+/* accordion list */
+#accordion {
+  padding: 0;
+}
+
+#accordion p {
+  padding: 2%
+}
+
+div .card-header {
+  position: relative;
+  background-color: rgb(167, 215, 197, 0.5);
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.card-body li {
+  margin: 3% auto;
+  text-align: justify;
+  text-justify: auto;
+}
+
+/* media query */
+
+@media all and (min-width:1480.5px) {
+  .pj-sub-heading {
+    padding: 1.5% 0;
+  }
+}
+
+@media all and (min-width:991.5px) and (max-width:1075.5px) {
+  .pj-sub-heading {
+    padding-top: 4.5%;
+  }
+}
+
+@media all and (max-width:991.5px) and (min-width:767.5px) {
+  .pj-sub-heading {
+    padding-top: 3%;
+  }
+}
+
+@media all and (max-width:767.5px) {
+  .pj-sub-heading {
+    display: none;
+  }
+}
+
+@media all and (max-width:576px) {
+  div#licence h5.card-title {
+    font-size: 1.35rem;
+  }
+
+  .card-body {
+    padding: 0 2% 0 0;
+  }
+
+  .card-body li {
+    text-align: left;
+  }
+}
+
+
+/* for mbis,mwis only */
+h3#mbis {
+  padding: 1% 0;
+}
+
+@media all and (min-width:991.5px) and (max-width:1075.5px) {
+  h3#mbis.pj-sub-heading {
+    padding-top: 2.5%;
+  }
+}
+
+@media all and (max-width:991.5px) and (min-width:767.5px) {
+  h3#mbis.pj-sub-heading {
+    font-size: 1.5rem;
+    padding-top: 1%;
+  }
+}
+
+
+/* for licence application only */
+div#licence {
+  border-top: 1px solid grey;
+}
+
+.licensing-description {
+  margin: 3% 0 4% 0.5%;
+}
+
+#licence img {
+  max-height: 100px;
+  max-width: 200px;
+}
+
+#licence ul li {
+  text-align: left;
+}
+
+@media all and (max-width: 767px) {
+  .licensing-description {
+    margin: 25px 0 20px 1%;
+  }
+}
+
+
+/* for licence application sub-parts */
+div.licensing-heading h2 {
+  font-size: 1.5rem;
+  padding: 0 0 0 5%;
+}
+
+div.licensing-heading h3.pj-sub-heading {
+  padding-top: 25px;
+}
+
+
+@media all and (min-width:1480.5px) {
+  div.licensing-heading h3.pj-sub-heading {
+    padding-top: 1%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  div.licensing-heading h2 {
+    padding: 0 0 0 2%;
+  }
+}

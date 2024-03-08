@@ -1,0 +1,79 @@
+/* .container-95c in all.css*/
+
+.card-width {
+    max-width: 95%;
+}
+
+.service h3.card-title {
+    margin: 1%;
+    font-size: 1.65rem;
+}
+
+.service img {
+    border-radius: 0;
+}
+
+.service .card-header {
+    background-color: rgb(244, 249, 244, 0.5);
+}
+
+.service li {
+    padding: 1% 0 1%;
+    font-size: 1.1rem;
+}
+
+/* justify the content inside card */
+.service .card-body {
+    display: flex;
+    justify-content: center;
+}
+
+ul.bm {
+    list-style-image: url('../images/wrench.png');
+}
+
+ul.aai {
+    list-style-image: url('../images/drill.png');
+}
+
+ul.lic {
+    list-style-image: url('../images/street-food.png');
+}
+
+ul.bm:first-child,
+ul.aai:first-child {
+    margin-top: 2%;
+}
+
+.lic li:first-child {
+    padding-top: 2%;
+}
+
+/* media query */
+@media all and (max-width:576px) {
+    .service .col-lg-6:last-of-type{
+        margin-bottom: 3%;
+    }
+    
+    .card-width {
+        max-width: 100%;
+    }
+
+    .service .card-body {
+        padding: 0 1% 0;
+    }
+}
+
+@media all and (max-width: 500px) {
+    ul.bm, ul.aai {
+        margin-left: 3px;
+    }
+
+    ul.lic {
+        padding-left: 0.5rem;
+    }
+
+    .service h3.card-title {
+        font-size: 1.2rem;
+    }
+}   

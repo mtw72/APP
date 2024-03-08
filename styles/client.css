@@ -1,0 +1,56 @@
+/* .container-95c in all.css*/
+
+#client .nav-link {
+    color: green;
+}
+
+#client a.active {
+    color: white;
+    background-color: green;
+}
+
+div.tab-content {
+    border-top: 1px solid green;
+}
+
+div.tab-pane {
+    height: 400px;
+}
+
+div.tab-pane h3 {
+    padding: 1% 0 0 0;
+}
+
+div.tab-pane .img-thumbnail {
+    height: auto;
+    width: 300px;
+}
+
+div.tab-list li {
+    font-size: 1.1rem;
+    margin: 2%;
+}
+
+/* media query */
+@media all and (max-width:767.5px) {
+    div.tab-pane {
+        height: 720px;
+    }
+
+    div.tab-pane h3 {
+        padding: 0 0 1% 0;
+        text-align: center;
+    }
+
+    div.tab-pane .img-thumbnail {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media all and (max-width:767.5px) and (min-width:500px) {
+    div.tab-pane .tab-list ul {
+        padding-left: 15%;
+    }
+}
